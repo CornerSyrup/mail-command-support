@@ -1,0 +1,33 @@
+{
+    "name": "smtp-command-support",
+    "displayName": "smtp-command-support",
+    "description": "SMTP command snippet and syntax highlight",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": ">=1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "smtp",
+                "aliases": [
+                    "SMTP"
+                ],
+                "extensions": [
+                    ".smtp"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "smtp",
+                "scopeName": "source.smtp",
+                "path": "./syntaxes/smtp.tmLanguage.json"
+            }
+        ]
+    }
+}
