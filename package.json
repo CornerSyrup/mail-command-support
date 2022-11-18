@@ -3,6 +3,13 @@
     "displayName": "smtp-command-support",
     "description": "SMTP command snippet and syntax highlight",
     "version": "0.1.0",
+    "scripts": {
+        "build": "vsce package"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KleinChiu/smtp-command-support.git"
+    },
     "engines": {
         "vscode": ">=1.0.0"
     },
