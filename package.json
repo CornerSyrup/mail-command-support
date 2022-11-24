@@ -28,6 +28,16 @@
                     ".smtp"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "pop3",
+                "aliases": [
+                    "POP3"
+                ],
+                "extensions": [
+                    ".pop3"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -35,6 +45,11 @@
                 "language": "smtp",
                 "scopeName": "source.smtp",
                 "path": "./syntaxes/smtp.tmLanguage.json"
+            },
+            {
+                "language": "pop3",
+                "scopeName": "source.pop3",
+                "path": "./syntaxes/pop3.tmLanguage.json"
             }
         ],
         "snippets": [
