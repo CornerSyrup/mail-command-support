@@ -1,0 +1,20 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "pop3",
+    "patterns": [
+        {
+            "include": "#keywords"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.other",
+                    "match": "(?i:^(user|pass|quit|stat|list|retr|dele|top|uidl|noop|rset)\\b)"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.pop3"
+}
