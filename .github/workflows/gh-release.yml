@@ -19,14 +19,15 @@ jobs:
         with:
           node-version: 16.x
           cache: npm
-        
-      - name: Install bundler
+
+      - name: Install dependencies
         run: >
           npm install --global vsce;
-      
+          npm install;
+
       - name: Build extension
         run: >
-          vsce package --out extension.vsix
+          npm run build
 
       - name: Release extension
         uses: softprops/action-gh-release@v1
