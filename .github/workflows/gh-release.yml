@@ -2,8 +2,6 @@ name: Deploy to GitHub Release
 
 on:
   push:
-    branches:
-      - deploy/gh-release
     tags:
       - v0.*
 
@@ -34,8 +32,8 @@ jobs:
         run: >
           npm run build
 
-      # - name: Release extension
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     files: |
-      #       extension.vsix
+      - name: Release extension
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            extension.vsix
