@@ -56,6 +56,10 @@
             {
                 "language": "smtp",
                 "path": "./snippets/smtp.code-snippets"
+            },
+            {
+                "language": "pop3",
+                "path": "./snippets/pop3.code-snippets"
             }
         ]
     }

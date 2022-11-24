@@ -1,0 +1,62 @@
+{
+    "USER": {
+        "scope": "pop3",
+        "prefix": "user",
+        "body": ["USER $1", "$0"],
+        "description": "Login command providing user name."
+    },
+    "PASS": {
+        "scope": "pop3",
+        "prefix": "pass",
+        "body": ["PASS $1", "$0"],
+        "description": "Login command providing password."
+    },
+    "LOGIN": {
+        "scope": "pop3",
+        "prefix": "login",
+        "body": ["USER $1", "PASS $2", "$0"],
+        "description": "Full version of login command"
+    },
+    "QUIT": {
+        "scope": "pop3",
+        "prefix": "quit",
+        "body": ["QUIT", "$0"],
+        "description": "Logout and save changes."
+    },
+    "STAT": {
+        "scope": "pop3",
+        "prefix": ["stat", "statistics"],
+        "body": ["STAT", "$0"],
+        "description": "Show total number of messages and their size."
+    },
+    "LIST": {
+        "scope": "pop3",
+        "prefix": "list",
+        "body": ["LIST", "$0"],
+        "description": "List all messages with index and size."
+    },
+    "RETR": {
+        "scope": "pop3",
+        "prefix": ["retr", "retrieve"],
+        "body": ["RETR $1", "$0"],
+        "description": "Retrieves the whole message"
+    },
+    "DELE": {
+        "scope": "pop3",
+        "prefix": ["dele", "delete"],
+        "body": ["DELE $1", "$0"],
+        "description": "Delete the specified message"
+    },
+    "TOP": {
+        "scope": "pop3",
+        "prefix": ["top", "header"],
+        "body": ["TOP ${1:index} ${2:lines}", "$0"],
+        "description": "Return the headers and first few lines of message by message index."
+    },
+    "UIDL": {
+        "scope": "pop3",
+        "prefix": ["uidl", "unique"],
+        "body": ["UIDL $1", "$0"],
+        "description": "Return a unique ID for the message specified."
+    }
+}
