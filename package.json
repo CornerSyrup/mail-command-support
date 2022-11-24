@@ -10,12 +10,21 @@
         "type": "git",
         "url": "https://github.com/KleinChiu/smtp-command-support.git"
     },
+    "main": "./out/extension.js",
+    "devDependencies": {
+        "@types/node": "^18.11.9",
+        "@types/vscode": "^1.73.1",
+        "typescript": "^4.9.3"
+    },
     "engines": {
         "vscode": ">=1.0.0"
     },
     "categories": [
         "Programming Languages",
         "Snippets"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
     ],
     "contributes": {
         "languages": [
@@ -28,6 +37,16 @@
                     ".smtp"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "pop3",
+                "aliases": [
+                    "POP3"
+                ],
+                "extensions": [
+                    ".pop3"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -35,12 +54,21 @@
                 "language": "smtp",
                 "scopeName": "source.smtp",
                 "path": "./syntaxes/smtp.tmLanguage.json"
+            },
+            {
+                "language": "pop3",
+                "scopeName": "source.pop3",
+                "path": "./syntaxes/pop3.tmLanguage.json"
             }
         ],
         "snippets": [
             {
                 "language": "smtp",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/smtp.code-snippets"
+            },
+            {
+                "language": "pop3",
+                "path": "./snippets/pop3.code-snippets"
             }
         ]
     }
