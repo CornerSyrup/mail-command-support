@@ -2,6 +2,8 @@ name: Deploy to GitHub Release
 
 on:
   push:
+    branches:
+      - deploy/gh-release
     tags:
       - v0.*
 
@@ -18,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
         run: >
@@ -29,8 +31,8 @@ jobs:
         run: >
           npm run build
 
-      - name: Release extension
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            extension.vsix
+      # - name: Release extension
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: |
+      #       extension.vsix
