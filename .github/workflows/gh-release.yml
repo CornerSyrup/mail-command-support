@@ -1,0 +1,36 @@
+name: Deploy to GitHub Release
+
+on:
+  push:
+    tags:
+      - v0.*
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Prepare NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+
+      - name: Install dependencies
+        run: >
+          npm install --global vsce;
+          npm install;
+
+      - name: Build extension
+        run: >
+          npm run build
+
+      - name: Release extension
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            extension.vsix
