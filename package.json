@@ -55,7 +55,7 @@
         "snippets": [
             {
                 "language": "smtp",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/smtp.code-snippets"
             }
         ]
     }
