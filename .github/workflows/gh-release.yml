@@ -16,16 +16,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Manage packages
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: |
+            - args: []
+            - args: [--global vsce]
+
       - name: Prepare NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: pnpm
-
-      - name: Install dependencies
-        run: >
-          npm install --global vsce;
-          npm install;
 
       - name: Build extension
         run: >
