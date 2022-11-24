@@ -11,7 +11,7 @@
             "patterns": [
                 {
                     "name": "keyword.other",
-                    "match": "(?i:^(user|pass|quit|stat|list|noop|rset|(retr|dele|uidl)\\s+\\d+|top\\s+\\d+\\s+\\d+)\\b)"
+                    "match": "(?i:^(user|pass|quit|stat|list|retr|dele|top|uidl|noop|rset)\\b)"
                 }
             ]
         }
