@@ -19,6 +19,7 @@ jobs:
       - name: Manage packages
         uses: pnpm/action-setup@v2
         with:
+          version: latest
           run_install: |
             - args: []
             - args: [--global vsce]
