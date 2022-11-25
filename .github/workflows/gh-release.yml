@@ -2,10 +2,9 @@ name: Deploy to GitHub Release
 
 on:
   push:
-    branches:
-      - deploy/fix-extension-name
     tags:
       - v0.*
+      - deploy/fix-extension-name
 
   workflow_dispatch:
 
