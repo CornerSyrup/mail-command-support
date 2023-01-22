@@ -2,6 +2,8 @@ name: Deploy to GitHub Release
 
 on:
   push:
+    branches:
+      - deploy/vs-marketplace
     tags:
       - v0.*
 
@@ -28,11 +30,13 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - name: Build extension
-        run: >
-          npm run build
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
 
-      - name: Release extension
+      - name: Publish to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
