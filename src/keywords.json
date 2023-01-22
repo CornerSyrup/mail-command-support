@@ -1,7 +1,7 @@
 {
     "pop3": [
-        { "text": "USER", "label": "USER", "docs": "Login username" },
-        { "text": "PASS", "label": "PASS", "docs": "Login password" },
+        { "text": "USER ", "label": "USER", "docs": "Login username" },
+        { "text": "PASS ", "label": "PASS", "docs": "Login password" },
         { "text": "QUIT", "label": "QUIT", "docs": "Quit session" },
         {
             "text": "STAT",
@@ -10,22 +10,22 @@
         },
         { "text": "LIST", "label": "LIST", "docs": "List messages" },
         {
-            "text": "RETR",
+            "text": "RETR ",
             "label": "RETR",
             "docs": "Retrieve the whole messages"
         },
         {
-            "text": "DELE",
+            "text": "DELE ",
             "label": "DELE",
             "docs": "Delete the message"
         },
         {
-            "text": "TOP",
+            "text": "TOP ${1:index} ${2:lines}",
             "label": "TOP",
             "docs": "Header and Top few lines of message"
         },
         {
-            "text": "UIDL",
+            "text": "UIDL ",
             "label": "UIDL",
             "docs": "Unique ID of a message"
         },
@@ -38,17 +38,17 @@
     ],
     "smtp": [
         {
-            "text": "HELO",
+            "text": "HELO ",
             "label": "HELO",
             "docs": "It provides the identification of the sender."
         },
         {
-            "text": "MAIL",
+            "text": "MAIL FROM: ",
             "label": "MAIL",
             "docs": "It specifies the originator of the mail."
         },
         {
-            "text": "RCPT",
+            "text": "RCPT TO: ",
             "label": "RCPT",
             "docs": "It specifies the recipient of mail."
         },
@@ -68,7 +68,7 @@
             "docs": "It aborts the current mail transaction but the TCP connection remains open."
         },
         {
-            "text": "VRFY",
+            "text": "VRFY ",
             "label": "VRFY",
             "docs": "It is use to confirm or verify the user name."
         },
@@ -79,7 +79,7 @@
             "docs": "It reverses the role of sender and receiver."
         },
         {
-            "text": "EXPN",
+            "text": "EXPN ",
             "label": "EXPN",
             "docs": "It specifies the mailing list to be expanded."
         },
@@ -89,17 +89,17 @@
             "docs": "It send some specific docs to the system."
         },
         {
-            "text": "SEND",
+            "text": "SEND FROM: ",
             "label": "SEND",
             "docs": "It send mail to the terminal."
         },
         {
-            "text": "SOML",
+            "text": "SOML FROM: ",
             "label": "SOML",
             "docs": "It send mail to the terminal if possible; otherwise to mailbox."
         },
         {
-            "text": "SAML",
+            "text": "SAML FROM: ",
             "label": "SAML",
             "docs": "It send mail to the terminal and mailbox."
         }

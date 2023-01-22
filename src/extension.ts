@@ -12,14 +12,14 @@ import { pop3, smtp } from "./keywords.json";
 
 interface KeywordInfo {
     label: string;
-    text?: string | SnippetString;
+    text?: string;
     docs?: string;
 }
 
 const keywordCompletionItem = ({ label, text, docs }: KeywordInfo) => {
     const item = new CompletionItem(label, CompletionItemKind.Keyword);
 
-    item.insertText = text;
+    item.insertText = new SnippetString(text);
     item.documentation = docs;
 
     return item;
