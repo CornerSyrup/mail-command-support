@@ -2,6 +2,13 @@
 
 All notable changes to the "mail-command-support" extension will be documented in this file.
 
+## 0.2.2
+
+It's too noisy to have both snippets and completion for keywords.
+
+-   Add SMTP completions
+-   Replace keyword insert text with snippets
+
 ## 0.2.1
 
 Fix CI config
