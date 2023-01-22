@@ -1,8 +1,9 @@
 {
     "name": "mail-command-support",
     "displayName": "mail-command-support",
-    "description": "Mail command snippet and syntax highlight",
     "version": "0.2.1",
+    "publisher": "cornersyrup",
+    "description": "Mail command snippet and syntax highlight",
     "scripts": {
         "prebuild": "tsc",
         "build": "vsce package"
