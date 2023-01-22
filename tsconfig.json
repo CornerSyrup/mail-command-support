@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
         "target": "es2016",
-        "module": "commonjs",
-        "resolveJsonModule": true,
-        "outDir": "./out",
+        "module": "CommonJS",
+        "outDir": ".",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["src/**/*.ts", "src/**/*.json"]
+    "include": ["src/**/*.ts", "src/**/*.json"],
+    "exclude": []
 }

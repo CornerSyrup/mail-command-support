@@ -57,10 +57,10 @@ cat template.smtp | sed -e "s/%DATE%/$(date)/" | nc localhost 25
 
 ### Syntax highlight
 
-![](./docs/usage.png)
+![](docs/usage.png)
 
-![](./docs/demo.gif)
+![](docs/demo.gif)
 
 ## Release Notes
 
-See [CHANGELOG](./CHANGELOG.md)
+See [CHANGELOG](CHANGELOG.md)

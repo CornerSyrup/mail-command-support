@@ -1,7 +1,7 @@
 {
     "name": "mail-command-support",
     "displayName": "Mail Command Support",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "publisher": "CornerSyrup",
     "description": "Mail command snippet and syntax highlight",
     "scripts": {
@@ -12,7 +12,12 @@
         "type": "git",
         "url": "https://github.com/KleinChiu/mail-command-support.git"
     },
-    "main": "./out/extension.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "license": "MIT",
+    "main": "extension.js",
+    "browser": "extension.js",
     "devDependencies": {
         "@types/node": "^18.11.9",
         "@types/vscode": ">=1.0.0",
