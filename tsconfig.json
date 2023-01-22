@@ -1,8 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2016",
-        "module": "commonjs",
-        "resolveJsonModule": true,
+        "module": "CommonJS",
         "outDir": "./out",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
