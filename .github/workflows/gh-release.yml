@@ -1,4 +1,4 @@
-name: Deploy to GitHub Release
+name: Deploy extension
 
 on:
   push:
