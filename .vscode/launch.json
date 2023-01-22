@@ -6,10 +6,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Extension",
+            "name": "Extension (desktop)",
             "type": "extensionHost",
             "request": "launch",
             "args": ["--extensionDevelopmentPath=${workspaceFolder}"]
+        },
+        {
+            "name": "Extension (web)",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionDevelopmentKind=web"
+            ]
         }
     ]
 }

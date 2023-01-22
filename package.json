@@ -13,6 +13,7 @@
         "url": "https://github.com/KleinChiu/mail-command-support.git"
     },
     "main": "./out/extension.js",
+    "browser": "./out/extension.js",
     "devDependencies": {
         "@types/node": "^18.11.9",
         "@types/vscode": ">=1.0.0",
