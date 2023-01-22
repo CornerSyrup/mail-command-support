@@ -5,34 +5,50 @@ import {
     ExtensionContext,
     languages,
     ProviderResult,
+    SnippetString,
 } from "vscode";
 
-import { pop3 } from "./keywords.json";
+import { pop3, smtp } from "./keywords.json";
 
-export default class POP3CompletionProvider implements CompletionItemProvider {
+interface KeywordInfo {
+    label: string;
+    text?: string | SnippetString;
+    docs?: string;
+}
+
+const keywordCompletionItem = ({ label, text, docs }: KeywordInfo) => {
+    const item = new CompletionItem(label, CompletionItemKind.Keyword);
+
+    item.insertText = text;
+    item.documentation = docs;
+
+    return item;
+};
+
+class POP3CompletionProvider implements CompletionItemProvider {
     public provideCompletionItems(): ProviderResult<CompletionItem[]> {
-        const keywords = pop3.map((record) => {
-            const item = new CompletionItem(
-                record.label,
-                CompletionItemKind.Keyword
-            );
+        return pop3.map(keywordCompletionItem);
+    }
+}
 
-            item.insertText = record.text;
-            item.documentation = record.documentation;
-
-            return item;
-        });
-        return [...keywords];
+class SMTPCompletionProvider implements CompletionItemProvider {
+    public provideCompletionItems(): ProviderResult<CompletionItem[]> {
+        return smtp.map(keywordCompletionItem);
     }
 }
 
 export function activate(context: ExtensionContext) {
-    const provider = languages.registerCompletionItemProvider(
+    const pop3 = languages.registerCompletionItemProvider(
         "pop3",
         new POP3CompletionProvider()
     );
 
-    context.subscriptions.push(provider);
+    const smtp = languages.registerCompletionItemProvider(
+        "smtp",
+        new SMTPCompletionProvider()
+    );
+
+    context.subscriptions.push(pop3, smtp);
 }
 
 export function deactivate() {}
