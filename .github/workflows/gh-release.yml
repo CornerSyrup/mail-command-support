@@ -30,14 +30,21 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - name: Publish to Visual Studio Marketplace
-        uses: HaaLeo/publish-vscode-extension@v1
-        with:
-          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-          registryUrl: https://marketplace.visualstudio.com
+      - name: Build extension
+        id: build
+        run: |
+          npm run build
+          echo "EXTENSION_PATH=$(ls *.vsix)" >> $GITHUB_ENV
 
       - name: Publish to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            *.vsix
+            ${{ env.EXTENSION_PATH }}
+
+      # - name: Publish to Visual Studio Marketplace
+      #   uses: HaaLeo/publish-vscode-extension@v1
+      #   with:
+      #     pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+      #     registryUrl: https://marketplace.visualstudio.com
+      #     extensionFile: ${{ env.EXTENSION_PATH }}
