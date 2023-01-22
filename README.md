@@ -1,5 +1,11 @@
 # SMTP Command Support
 
+![GitHub](https://img.shields.io/github/license/KleinChiu/mail-command-support)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/KleinChiu/mail-command-support?sort=semver)
+[![Deploy extension](https://github.com/KleinChiu/mail-command-support/actions/workflows/gh-release.yml/badge.svg)](https://github.com/KleinChiu/mail-command-support/actions/workflows/gh-release.yml)
+
+Try it out on [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=cornersyrup.mail-command-support)!
+
 VSCode extension support mail related commands.
 
 ## Features
